@@ -60,7 +60,7 @@ impl GutpUserModule {
         let sql = SqlBuilder::select_from(&GutpUser::model_name())
             .fields(&GutpUser::fields())
             .and_where_eq("account", "$1")
-            .order_desc("signup_time")
+            //.order_desc("signup_time")
             .limit(limit)
             .offset(offset)
             .sql()?;
